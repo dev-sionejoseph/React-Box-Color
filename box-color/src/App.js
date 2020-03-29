@@ -23,7 +23,7 @@ export default class App extends Component {
     let num = this.state.clickCounter;
 
     this.setState({
-      clickCounter: this.state.clickCounter > 5 ? this.state.clickCounter+=1 : this.state.clickCounter = 0,
+      clickCounter: this.state.clickCounter < 5 ? this.state.clickCounter+=1 : this.state.clickCounter = 0,
       color: this.colorArray
     })
 
@@ -35,7 +35,7 @@ export default class App extends Component {
       <div className="App">
         <h1> Box color change .</h1>
         <div              className="colorBox"
-        style={{backgroundColor: this.colorArray[this.num]}}
+        style={{backgroundColor: this.colorArray[this.state.clickCounter]}}
         onClick={this.onChange}
         >
         <p>Click Here</p>
