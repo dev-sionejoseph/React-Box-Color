@@ -19,15 +19,15 @@ export default class App extends Component {
   
   onChange = (e) => {
 
-    
+    // added this variable just to simplify syntax
     let num = this.state.clickCounter;
 
     this.setState({
-      clickCounter: this.state.clickCounter < 5 ? this.state.clickCounter+=1 : this.state.clickCounter = 0,
-      color: this.colorArray
+      clickCounter: num < 5 ? num+=1 : num = 0,  //this statement checks if counter is less than 5. if so, it increments
+      color: this.colorArray[num]  //use variable num as an iterator through color array.
     })
 
-    console.log("click counter ===> ", this.state.clickCounter)
+    console.log("click counter ===> ", num)
   }
 
   render() {
@@ -35,7 +35,7 @@ export default class App extends Component {
       <div className="App">
         <h1> Box color change .</h1>
         <div              className="colorBox"
-        style={{backgroundColor: this.colorArray[this.state.clickCounter]}}
+        style={{backgroundColor: this.state.color}}
         onClick={this.onChange}
         >
         <p>Click Here</p>
