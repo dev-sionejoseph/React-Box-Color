@@ -1,0 +1,6 @@
+.colorBox {
+  width: 300px;
+  height: 300px;
+  transition: 0.3s;
+  color: white;
+}
