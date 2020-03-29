@@ -5,13 +5,20 @@
   flex-direction: column;
   text-align: center;
   height: 100vh;
-  color: darkgoldenrod;
+  /* color: darkgoldenrod; */
   text-shadow: 
     -1px -1px 0 #000,  
      1px -1px 0 #000,
     -1px 1px 0 #000,
      1px 1px 0 #000;
   background-image: url('https://background-tiles.com/overview/mixed-colors/patterns/large/1087.png');
+  }
+
+h1{
+  font-size: 72px;
+  background: -webkit-linear-gradient(red, orange,yellow,green,blue,purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .colorBox {
